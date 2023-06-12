@@ -1,17 +1,16 @@
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #a67952;
+body{
+    background-color: #8EC5FC;
+    background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);*
+    height: 100%;
 }
 
 #nav {
-    float: left;
+    display: inline-block;
 }
+
 #nav a {
     display: block;
-    color: white;
+    color: Black;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -19,63 +18,96 @@ ul {
 
 
 #nav a:hover {
-    background-color: #111;
+    background-color: rgba(112,128,144,0.2);
+    color: white;
 }
 
-
-
-html, body{
-    background-image: url(/static/img/fondbrique.jpg);
-    margin:0;
-    height:98%;
+ul {
+    list-style-type: none;
+    margin-left: 35%;
+    margin-right: 35%;
+    overflow: hidden;
+    background-color: rgba(101,115,126,0.1);
 }
 
-#fond{
-    background-image: url(/static/img/parcheminc.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin-top: 1%;
-    margin-left: 10%;
-    margin-right: 10%;
-    height: 100%;
+form{
+    margin-left: 35%;
+    white-space: normal;
+
+}
+
+form input{
+    margin-bottom: 5%;
+    margin-right: 80%;
+}
+
+form input[type=text]{
+    margin-right:70%;
+    margin-bottom: 5%;
+    border-style: none;
+    color: #333;
+    box-sizing: border-box;
+    letter-spacing: 1px;
+}
+
+form label{
+    margin-left: 7%;
+    margin-right: 80%;
+
+}
+
+#content{
+    margin-left: 25%;
+    background: rgba(255,255,255,0.2);
+    margin-right: 25%;
+    height: 80%;
+    width: 50%;
+    position: absolute;
+
 }
 
 h1{
-    margin-left: 45%;
+    margin-left: 5%;
 }
 
 h2{
     margin-left: 2%;
 }
 
-#desc{
-    font-size: 20px;
-    margin-left: 3%;
+#riaj:link, #riaj:visited {
+  --c:  #229091; /* the color*/
+
+  box-shadow: 0 0 0 .1em inset var(--c);
+  --_g: linear-gradient(var(--c) 0 0) no-repeat;
+  background:
+    var(--_g) calc(var(--_p,0%) - 100%) 0%,
+    var(--_g) calc(200% - var(--_p,0%)) 0%,
+    var(--_g) calc(var(--_p,0%) - 100%) 100%,
+    var(--_g) calc(200% - var(--_p,0%)) 100%;
+  background-size: 50.5% calc(var(--_p,0%)/2 + .5%);
+  outline-offset: .1em;
+  transition: background-size .4s, background-position 0s .4s;
+  text-decoration: none;
+  color: black;
+  margin-left: 2%;
+  width: 30%;
+  font-size: 1.5em;
+  background-color: rgba(150,206,247,0.3);
+  padding: 0.5%;
+  border-radius: 5%;
 }
 
-#riaj:link, #riaj:visited{
-    background-color: #474e3c;
-    color: white;
-    padding: 14px 25px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    border-style: groove;
-    border-width: 2px;
-    border-color: #111;
-    margin-left: 2%;
+
+#riaj:hover {
+  --_p: 100%;
+  transition: background-position .4s, background-size 0s;
+}
+#riaj:active {
+  box-shadow: 0 0 9e9q inset #0009;
+  background-color: var(--c);
+  color: #fff;
 }
 
-#riaj:hover, #riaj:active {
-    background-color: rgba(0, 255, 76);
-  }
-
-body{
-    background-color: gray;
-}
-
-ul{
-    border-style: groove;
-    border-width: 3px;
-    border-color: rgb(139,69,19);
+li{
+    margin-top: 2%;
 }

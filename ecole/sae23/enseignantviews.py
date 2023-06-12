@@ -20,11 +20,12 @@ def traitement(request):
 
 def all(request):
     liste = list(models.Enseigant.objects.all())
-    return render(request,'enseignants/all.html', {"liste" : liste})
+    return render(request, 'enseignants/all.html', {"liste": liste})
 
 def affiche(request, id):
     ens = models.Enseigant.objects.get(pk=id)
-    return render(request,"enseignants/affiche.html", {"ens": ens})
+    cours = models.Cours.objects.filter(enseigant=ens)
+    return render(request,"enseignants/affiche.html", {"ens": ens, "cours":cours})
 
 def update(request, id):
     ens = models.Enseigant.objects.get(pk=id)

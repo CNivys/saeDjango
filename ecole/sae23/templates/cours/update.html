@@ -7,7 +7,7 @@
 <body>
     <form method="post" action="/ecole/updatetraitementcours/{{id}}">
         {% csrf_token %}
-        {{ form.as_ul }}
+        {{ form }}
             <input type="submit" value="envoyer les données"\>
     </form>
 </body>

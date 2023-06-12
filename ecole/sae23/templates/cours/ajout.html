@@ -11,7 +11,7 @@ Cours
         <form method="POST" action="/ecole/traitementcours/">
     {% endif %}
         {% csrf_token %}
-        {{form.as_ul}}
+        {{ form }}
         <input type="submit" value="envoyez les données"/>
     </form>
 {% endblock %}

@@ -24,7 +24,8 @@ def all(request):
 
 def affiche(request, id):
     grp = models.Groupe.objects.get(pk=id)
-    return render(request,"groupe/affiche.html", {"grp": grp})
+    etudiants = models.Etudiant.objects.filter(groupe=grp)
+    return render(request, "groupe/affiche.html", {"grp": grp, "etudiants": etudiants})
 
 def update(request, id):
     grp = models.Groupe.objects.get(pk=id)

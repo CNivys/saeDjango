@@ -3,6 +3,7 @@ from django.http import HttpResponseRedirect
 from django.shortcuts import render
 from .forms import EtudForm
 from . import models
+from django.conf import settings
 
 
 # Create your views here.
@@ -22,6 +23,9 @@ def traitement(request):
 
 def all(request):
     liste = list(models.Etudiant.objects.all())
+    for etudiant in liste:
+        if etudiant.photo:
+            etudiant.photo_url = settings.MEDIA_URL + str(etudiant.photo)
     return render(request,'etudiants/all.html', {"liste" : liste})
 
 def affiche(request, id):

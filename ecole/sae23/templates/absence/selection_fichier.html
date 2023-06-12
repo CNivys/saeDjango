@@ -6,7 +6,7 @@ Absence
 
 <form method="post" action="/ecole/traitement_fichier/" enctype="multipart/form-data">
     {% csrf_token %}
-    {{ form.as_ul }}
+    {{ form }}
     <button type="submit">Sélectionner le fichier</button>
 </form>
 {% endblock %}

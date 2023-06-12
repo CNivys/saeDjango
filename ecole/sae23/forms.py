@@ -35,6 +35,7 @@ class EtudForm(ModelForm):
         }
 
 class coursForm(ModelForm):
+    date = forms.DateField(widget=forms.DateInput(attrs={"type" : "date"}))
     class Meta:
         model = models.Cours
         fields = ('idcours','titre_cours', 'date', 'duree', 'enseigant')
